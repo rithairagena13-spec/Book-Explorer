@@ -5,141 +5,280 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Discover your next favorite book with Book Explorer." />
-    <title>Book Explorer | Discover Your Next Read</title>
+    <meta name="description" content="Discover thoughtful reads, explore new ideas, and find your next favorite book." />
+    <title>Book Explorer | Find Your Next Great Read</title>
     <link rel="stylesheet" href="/input.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
   </head>
 
-  <body class="min-h-screen bg-stone-50 text-stone-900">
-    <header class="border-b border-stone-200 bg-white">
-      <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
-        <a href="#" class="flex items-center gap-3 text-xl font-bold text-emerald-800 sm:text-2xl">
-          <i class="fa-solid fa-book-open" aria-hidden="true"></i>
-          <span>Book Explorer</span>
+  <body class="min-h-screen bg-[#f8f6f0] font-['DM_Sans'] text-[#292e29] antialiased">
+    <header class="relative z-20 border-b border-[#e6e4db] bg-[#f8f6f0]">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-12">
+        <a href="#home" class="flex items-center gap-3" aria-label="Book Explorer home">
+          <span class="flex h-11 w-11 items-center justify-center text-3xl text-[#687b68]">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+          </span>
+          <span>
+            <span class="block font-['Playfair_Display'] text-xl font-bold sm:text-2xl">Book Explorer</span>
+            <span class="mt-0.5 block text-xs tracking-[0.15em] text-[#777b70]">DISCOVER · READ · GROW</span>
+          </span>
         </a>
 
-        <div class="flex items-center gap-4 text-sm font-medium sm:gap-8">
-          <a href="#" class="text-emerald-800" aria-current="page">Home</a>
-          <a href="#books" class="text-stone-700 transition hover:text-emerald-700">Books</a>
-          <a href="#about" class="text-stone-700 transition hover:text-emerald-700">About</a>
+        <div class="hidden items-center gap-9 text-sm font-medium md:flex">
+          <a href="#home" class="transition hover:text-[#687b68]">Home</a>
+          <a href="#books" class="transition hover:text-[#687b68]">Books</a>
+          <a href="#about" class="transition hover:text-[#687b68]">About</a>
         </div>
+
+        <details class="relative md:hidden">
+          <summary class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-full border border-[#dedfd4] text-xl text-[#526553] transition hover:bg-[#e9ede4]" aria-label="Open navigation menu">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          </summary>
+          <div class="absolute right-0 top-14 w-52 rounded-xl border border-[#e6e4db] bg-[#fffdf8] p-3 shadow-xl">
+            <a href="#home" class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm hover:bg-[#edf0e8]">
+              <i class="fa-solid fa-house w-5 text-[#687b68]" aria-hidden="true"></i>
+              Home
+            </a>
+            <a href="#books" class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm hover:bg-[#edf0e8]">
+              <i class="fa-solid fa-book-open w-5 text-[#687b68]" aria-hidden="true"></i>
+              Books
+            </a>
+            <a href="#about" class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm hover:bg-[#edf0e8]">
+              <i class="fa-solid fa-circle-info w-5 text-[#687b68]" aria-hidden="true"></i>
+              About
+            </a>
+          </div>
+        </details>
       </nav>
     </header>
 
     <main>
-      <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
-        <div class="max-w-3xl">
-          <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-emerald-700">
-            Your next chapter starts here
-          </p>
+      <section id="home" class="relative overflow-hidden border-b border-[#e6e4db]">
+        <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-2 lg:gap-16 lg:px-12 lg:py-24">
+          <div class="relative z-10">
+            <p class="mb-6 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.23em] text-[#687b68]">
+              <span class="h-px w-8 bg-[#879681]"></span>
+              Good books. Better days.
+            </p>
 
-          <h1 class="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-            Discover books that
-            <span class="text-emerald-700">inspire you.</span>
-          </h1>
+            <h1 class="max-w-xl font-['Playfair_Display'] text-5xl font-semibold leading-[1.12] tracking-tight sm:text-6xl lg:text-7xl">
+              Find your next
+              <span class="italic text-[#788a75]">great read.</span>
+            </h1>
 
-          <p class="mt-6 max-w-2xl text-lg leading-8 text-stone-600">
-            Explore new stories, discover different perspectives, and find your next favorite read.
-          </p>
+            <p class="mt-7 max-w-lg text-base leading-8 text-[#6f726a] sm:text-lg">
+              Some stories entertain us. Others change how we see the world. Find the books that stay with you long after the final page.
+            </p>
 
-          <a
-            href="#books"
-            class="mt-8 inline-flex items-center gap-3 rounded-lg bg-emerald-700 px-6 py-3 font-semibold text-white transition hover:bg-emerald-800"
-          >
-            Explore Books
-            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-          </a>
+            <form action="#books" class="mt-9 flex max-w-lg items-center gap-2 rounded-full border border-[#e4e2d8] bg-white p-2 shadow-sm">
+              <label for="book-search" class="pl-4 text-[#788a75]">
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                <span class="sr-only">Search books</span>
+              </label>
+              <input id="book-search" type="search" placeholder="A story, an author, a feeling..." class="min-w-0 flex-1 bg-transparent py-2 text-sm outline-none placeholder:text-[#a4a49a]" />
+              <button type="submit" class="rounded-full bg-[#788a75] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#5f735d]">
+                Explore
+              </button>
+            </form>
+
+            <div class="mt-9 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-[#777b70]">
+              <span class="flex items-center gap-2">
+                <i class="fa-solid fa-bookmark text-[#788a75]" aria-hidden="true"></i>
+                Curated discoveries
+              </span>
+              <span class="flex items-center gap-2">
+                <i class="fa-solid fa-feather-pointed text-[#788a75]" aria-hidden="true"></i>
+                For curious minds
+              </span>
+            </div>
+          </div>
+
+          <div class="relative mx-auto w-full max-w-lg">
+            <div class="absolute -right-3 -top-5 h-32 w-32 rounded-full bg-[#e5e9dc] sm:-right-6 sm:h-44 sm:w-44"></div>
+            <div class="absolute -bottom-4 -left-4 h-28 w-28 rounded-full bg-[#e9dfcc] sm:-left-8 sm:h-36 sm:w-36"></div>
+
+            <div class="relative rounded-[2rem] border border-white/80 bg-[#eeece2] p-5 shadow-sm sm:p-8">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold uppercase tracking-[0.18em] text-[#74796c]">The reading corner</span>
+                <i class="fa-solid fa-sun text-[#9c906e]" aria-hidden="true"></i>
+              </div>
+
+              <div class="relative mt-8 flex min-h-[280px] items-end justify-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-br from-[#dfe3d6] via-[#e9e5d8] to-[#c7cdbd] px-4 pb-8 pt-12 sm:min-h-[330px]">
+                <div class="absolute right-9 top-7 h-24 w-24 rounded-full bg-[#f6f0df]/70 blur-sm"></div>
+
+                <div class="relative z-10 flex h-48 w-28 -rotate-6 flex-col justify-between border-l-4 border-[#8b7455] bg-[#b6a082] p-3 text-[#f9f3e5] shadow-xl sm:h-56 sm:w-32">
+                  <span class="text-[9px] uppercase tracking-[0.2em]">A collection</span>
+                  <span class="font-['Playfair_Display'] text-lg leading-tight sm:text-xl">Quiet<br />Moments</span>
+                  <span class="text-[9px]">BOOK ONE</span>
+                </div>
+
+                <div class="relative z-10 flex h-56 w-32 rotate-3 flex-col justify-between border-l-4 border-[#465849] bg-[#657b69] p-4 text-[#f6f3e9] shadow-2xl sm:h-64 sm:w-36">
+                  <i class="fa-solid fa-leaf text-xl" aria-hidden="true"></i>
+                  <span class="font-['Playfair_Display'] text-2xl leading-tight">The Art<br />of Slowing<br />Down</span>
+                  <span class="text-[9px] uppercase tracking-[0.18em]">A little more wonder</span>
+                </div>
+
+                <div class="relative z-10 flex h-44 w-24 -rotate-2 flex-col justify-between border-l-4 border-[#77674c] bg-[#c6b18b] p-3 text-[#473f31] shadow-xl sm:h-52 sm:w-28">
+                  <i class="fa-solid fa-star text-sm" aria-hidden="true"></i>
+                  <span class="font-['Playfair_Display'] text-lg leading-tight">New<br />Worlds</span>
+                  <span class="text-[9px]">VOL. 03</span>
+                </div>
+              </div>
+
+              <div class="mt-6 flex items-center justify-between gap-4">
+                <div>
+                  <p class="font-['Playfair_Display'] text-xl">A world between pages</p>
+                  <p class="mt-1 text-sm text-[#777b70]">Take a moment. Find a story.</p>
+                </div>
+                <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#d4d8ca] text-[#687b68]">
+                  <i class="fa-solid fa-arrow-down-right text-lg" aria-hidden="true"></i>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="books" class="bg-white px-4 py-16 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-7xl">
-          <div class="max-w-2xl">
-            <p class="text-sm font-semibold uppercase tracking-widest text-emerald-700">
-              Find your next read
-            </p>
-            <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
-              Explore Our Collection
+      <section id="books" class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-12">
+        <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.22em] text-[#788a75]">A little something for your shelf</p>
+            <h2 class="mt-3 font-['Playfair_Display'] text-3xl font-semibold sm:text-4xl">Stories worth staying for</h2>
+            <p class="mt-3 max-w-xl leading-7 text-[#777b70]">A small collection of reading moods to help you find where your next journey begins.</p>
+          </div>
+          <span class="text-sm text-[#777b70]">A curated first collection <i class="fa-solid fa-arrow-right ml-2" aria-hidden="true"></i></span>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="group rounded-2xl border border-[#e9e5dc] bg-[#fffdf8] p-4 transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div class="flex min-h-56 items-center justify-center rounded-xl bg-[#e9e7d9] p-6">
+              <div class="flex h-44 w-32 flex-col justify-between border-l-4 border-[#687b68] bg-[#8b9a82] p-4 text-[#fffdf4] shadow-lg transition group-hover:rotate-2">
+                <i class="fa-solid fa-seedling text-xl" aria-hidden="true"></i>
+                <span class="font-['Playfair_Display'] text-2xl leading-tight">Small<br />Beginnings</span>
+                <span class="text-[9px] uppercase tracking-widest">Grow at your pace</span>
+              </div>
+            </div>
+            <div class="px-2 pb-2 pt-5">
+              <div class="flex items-center justify-between gap-3">
+                <span class="rounded-full bg-[#e9ede4] px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-[#657861]">Personal growth</span>
+                <i class="fa-regular fa-bookmark text-[#788a75]" aria-hidden="true"></i>
+              </div>
+              <h3 class="mt-4 font-['Playfair_Display'] text-2xl font-semibold">The Art of Becoming</h3>
+              <p class="mt-2 text-sm text-[#777b70]">For the days you are ready to begin again.</p>
+              <div class="mt-5 flex items-center justify-between border-t border-[#eeeae1] pt-4 text-sm">
+                <span class="text-[#777b70]"><i class="fa-regular fa-clock mr-2" aria-hidden="true"></i>A thoughtful read</span>
+                <span class="font-semibold text-[#687b68]">01</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="group rounded-2xl border border-[#e9e5dc] bg-[#fffdf8] p-4 transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div class="flex min-h-56 items-center justify-center rounded-xl bg-[#e9e0d2] p-6">
+              <div class="flex h-44 w-32 flex-col justify-between border-l-4 border-[#7e6248] bg-[#b59b79] p-4 text-[#fff8e9] shadow-lg transition group-hover:-rotate-2">
+                <i class="fa-solid fa-moon text-xl" aria-hidden="true"></i>
+                <span class="font-['Playfair_Display'] text-2xl leading-tight">Beyond<br />the Known</span>
+                <span class="text-[9px] uppercase tracking-widest">A journey awaits</span>
+              </div>
+            </div>
+            <div class="px-2 pb-2 pt-5">
+              <div class="flex items-center justify-between gap-3">
+                <span class="rounded-full bg-[#f0e8dc] px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-[#8a6c4b]">Adventure</span>
+                <i class="fa-regular fa-bookmark text-[#788a75]" aria-hidden="true"></i>
+              </div>
+              <h3 class="mt-4 font-['Playfair_Display'] text-2xl font-semibold">Somewhere New</h3>
+              <p class="mt-2 text-sm text-[#777b70]">For curious minds that love the unexpected.</p>
+              <div class="mt-5 flex items-center justify-between border-t border-[#eeeae1] pt-4 text-sm">
+                <span class="text-[#777b70]"><i class="fa-solid fa-compass mr-2" aria-hidden="true"></i>Explore a new world</span>
+                <span class="font-semibold text-[#687b68]">02</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="group rounded-2xl border border-[#e9e5dc] bg-[#fffdf8] p-4 transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div class="flex min-h-56 items-center justify-center rounded-xl bg-[#e2e6e1] p-6">
+              <div class="flex h-44 w-32 flex-col justify-between border-l-4 border-[#465c56] bg-[#718982] p-4 text-[#f8f6ef] shadow-lg transition group-hover:rotate-2">
+                <i class="fa-solid fa-cloud text-xl" aria-hidden="true"></i>
+                <span class="font-['Playfair_Display'] text-2xl leading-tight">The Space<br />Between</span>
+                <span class="text-[9px] uppercase tracking-widest">Words to remember</span>
+              </div>
+            </div>
+            <div class="px-2 pb-2 pt-5">
+              <div class="flex items-center justify-between gap-3">
+                <span class="rounded-full bg-[#e3e9e5] px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-[#587268]">Fiction</span>
+                <i class="fa-regular fa-bookmark text-[#788a75]" aria-hidden="true"></i>
+              </div>
+              <h3 class="mt-4 font-['Playfair_Display'] text-2xl font-semibold">Letters to Tomorrow</h3>
+              <p class="mt-2 text-sm text-[#777b70]">For those who find meaning in the little things.</p>
+              <div class="mt-5 flex items-center justify-between border-t border-[#eeeae1] pt-4 text-sm">
+                <span class="text-[#777b70]"><i class="fa-regular fa-heart mr-2" aria-hidden="true"></i>A story to keep</span>
+                <span class="font-semibold text-[#687b68]">03</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="mx-auto max-w-7xl px-5 pb-16 sm:px-8 sm:pb-20 lg:px-12">
+        <div class="grid gap-8 rounded-3xl border border-[#e3e5da] bg-[#ecefe6] p-7 sm:p-10 lg:grid-cols-[1fr_1.2fr] lg:items-center lg:p-14">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.22em] text-[#788a75]">A note about us</p>
+            <h2 class="mt-4 max-w-lg font-['Playfair_Display'] text-3xl font-semibold leading-tight sm:text-4xl">
+              More than pages. A place to discover yourself.
             </h2>
-            <p class="mt-3 leading-7 text-stone-600">
-              Discover inspiring ideas, explore new worlds, and find a story worth remembering.
+            <p class="mt-5 max-w-lg leading-8 text-[#6f766a]">
+              Book Explorer is a home for curious minds, lifelong learners, and anyone looking for a fresh perspective. We believe every great read opens a door to something new.
             </p>
           </div>
 
-          <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <article class="rounded-xl border border-stone-200 bg-stone-50 p-5 transition hover:-translate-y-1 hover:shadow-md">
-              <div class="flex h-48 items-center justify-center rounded-lg bg-emerald-100">
-                <i class="fa-solid fa-book-open text-6xl text-emerald-800" aria-hidden="true"></i>
-              </div>
-              <p class="mt-5 text-xs font-semibold uppercase tracking-widest text-emerald-700">
-                Featured Book
-              </p>
-              <h3 class="mt-2 text-xl font-bold">The Art of Reading</h3>
-              <p class="mt-2 leading-6 text-stone-600">
-                Discover the joy of exploring new stories and ideas.
-              </p>
-              <a href="#about" class="mt-5 inline-flex items-center gap-2 font-semibold text-emerald-800 hover:text-emerald-950">
-                Discover more
-                <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i>
-              </a>
-            </article>
-
-            <article class="rounded-xl border border-stone-200 bg-stone-50 p-5 transition hover:-translate-y-1 hover:shadow-md">
-              <div class="flex h-48 items-center justify-center rounded-lg bg-amber-100">
-                <i class="fa-solid fa-lightbulb text-6xl text-amber-800" aria-hidden="true"></i>
-              </div>
-              <p class="mt-5 text-xs font-semibold uppercase tracking-widest text-emerald-700">
-                Editor's Pick
-              </p>
-              <h3 class="mt-2 text-xl font-bold">World of Ideas</h3>
-              <p class="mt-2 leading-6 text-stone-600">
-                Explore fresh perspectives and expand your knowledge.
-              </p>
-              <a href="#about" class="mt-5 inline-flex items-center gap-2 font-semibold text-emerald-800 hover:text-emerald-950">
-                Discover more
-                <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i>
-              </a>
-            </article>
-
-            <article class="rounded-xl border border-stone-200 bg-stone-50 p-5 transition hover:-translate-y-1 hover:shadow-md">
-              <div class="flex h-48 items-center justify-center rounded-lg bg-sky-100">
-                <i class="fa-solid fa-earth-africa text-6xl text-sky-800" aria-hidden="true"></i>
-              </div>
-              <p class="mt-5 text-xs font-semibold uppercase tracking-widest text-emerald-700">
-                Popular Read
-              </p>
-              <h3 class="mt-2 text-xl font-bold">Beyond the Pages</h3>
-              <p class="mt-2 leading-6 text-stone-600">
-                Find inspiration and discover different worlds through books.
-              </p>
-              <a href="#about" class="mt-5 inline-flex items-center gap-2 font-semibold text-emerald-800 hover:text-emerald-950">
-                Discover more
-                <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i>
-              </a>
-            </article>
+          <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <div class="rounded-2xl bg-[#f9f8f2] p-5">
+              <i class="fa-solid fa-leaf text-xl text-[#788a75]" aria-hidden="true"></i>
+              <h3 class="mt-4 font-semibold">Thoughtful discovery</h3>
+              <p class="mt-2 text-sm leading-6 text-[#777b70]">Find stories that meet your interests and spark your imagination.</p>
+            </div>
+            <div class="rounded-2xl bg-[#f9f8f2] p-5">
+              <i class="fa-solid fa-lightbulb text-xl text-[#9b8761]" aria-hidden="true"></i>
+              <h3 class="mt-4 font-semibold">Fresh perspectives</h3>
+              <p class="mt-2 text-sm leading-6 text-[#777b70]">Make room for new ideas, new questions, and new possibilities.</p>
+            </div>
+            <div class="rounded-2xl bg-[#f9f8f2] p-5">
+              <i class="fa-solid fa-book-open-reader text-xl text-[#788a75]" aria-hidden="true"></i>
+              <h3 class="mt-4 font-semibold">A reader's space</h3>
+              <p class="mt-2 text-sm leading-6 text-[#777b70]">Enjoy a calm place to browse and choose your next read.</p>
+            </div>
+            <div class="rounded-2xl bg-[#f9f8f2] p-5">
+              <i class="fa-solid fa-seedling text-xl text-[#788a75]" aria-hidden="true"></i>
+              <h3 class="mt-4 font-semibold">Room to grow</h3>
+              <p class="mt-2 text-sm leading-6 text-[#777b70]">Let each chapter bring you closer to something meaningful.</p>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer id="about" class="bg-stone-900 px-4 py-8 text-white sm:px-6 lg:px-8">
-      <div class="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <a href="#" class="flex items-center gap-2 text-lg font-bold">
-          <i class="fa-solid fa-book-open" aria-hidden="true"></i>
-          Book Explorer
+    <footer class="border-t border-[#e1e0d7] bg-[#e9e9df]">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-8 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-12">
+        <a href="#home" class="flex items-center gap-3">
+          <i class="fa-solid fa-book-open text-2xl text-[#687b68]" aria-hidden="true"></i>
+          <span>
+            <span class="block font-['Playfair_Display'] text-lg font-bold">Book Explorer</span>
+            <span class="text-xs text-[#777b70]">Discover · Read · Grow</span>
+          </span>
         </a>
 
-        <p class="text-sm text-stone-300">
-          Discover stories. Explore ideas. Keep reading.
-        </p>
+        <div class="flex flex-wrap gap-x-6 gap-y-3 text-sm text-[#62685f]">
+          <a href="#home" class="hover:text-[#526553]">Home</a>
+          <a href="#books" class="hover:text-[#526553]">Books</a>
+          <a href="#about" class="hover:text-[#526553]">About</a>
+        </div>
 
-        <p class="text-sm text-stone-400">
-          &copy; 2026 Book Explorer
-        </p>
+        <p class="text-xs text-[#777b70]">&copy; 2026 Book Explorer. Made for curious minds.</p>
       </div>
     </footer>
 
