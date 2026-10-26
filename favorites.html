@@ -54,6 +54,30 @@
   </div>
 </section>
 
+<section id="available-books" class="mx-auto max-w-7xl px-5 py-8 sm:px-8 lg:px-12" aria-labelledby="books-heading">
+  <div class="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+    <div>
+      <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-[#788a75]">A good place to begin</p>
+      <h2 id="books-heading" class="font-['Playfair_Display'] text-2xl font-semibold sm:text-3xl">Find a story to keep</h2>
+    </div>
+    <p class="text-sm text-[#73776e]">A few handpicked reads to inspire you.</p>
+  </div>
+
+  <div id="book-list" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <article class="group flex flex-col overflow-hidden rounded-2xl border border-[#e6e4db] bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-[#cbd5c3] hover:shadow-lg" data-book-card="1">
+      <div class="relative mb-5 flex h-52 items-center justify-center overflow-hidden rounded-xl bg-[#e4e9df]">
+        <span class="absolute left-4 top-4 rounded-full bg-white/80 px-3 py-1.5 text-xs font-semibold text-[#526750]">Editor's pick</span>
+        <i class="fa-solid fa-book-open text-6xl text-[#687b68] transition duration-300 group-hover:scale-110" aria-hidden="true"></i>
+      </div>
+      <p class="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-[#788a75]">Classic fiction</p>
+      <h3 class="font-['Playfair_Display'] text-xl font-semibold leading-snug">Pride and Prejudice</h3>
+      <p class="mt-2 text-sm text-[#73776e]">by Jane Austen</p>
+      <p class="mt-4 flex-1 text-sm leading-6 text-[#73776e]">A beloved story of first impressions, family, and discovering the person behind the assumptions.</p>
+      <button type="button" data-book-id="1" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#788a75] px-5 py-3 text-sm font-semibold text-[#526750] transition hover:bg-[#788a75] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#526750]" aria-label="Add Pride and Prejudice to favorites"><i class="fa-regular fa-heart" aria-hidden="true"></i><span>Add to Favorites</span></button>
+    </article>
+  </div>
+</section>
+
     </main>
   </body>
 </html>
