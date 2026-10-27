@@ -51,6 +51,19 @@ function createBookCard(book) {
   coverArea.className =
     "flex min-h-56 items-center justify-center overflow-hidden rounded-xl bg-[#e9e7d9] p-6";
 
+  function createFallbackCover() {
+    const fallback = document.createElement("div");
+    fallback.className =
+      "flex h-44 w-32 items-center justify-center rounded-lg bg-[#8b9a82] p-4 text-white";
+
+    const icon = document.createElement("i");
+    icon.className = "fa-solid fa-book-open text-3xl";
+    icon.setAttribute("aria-hidden", "true");
+
+    fallback.append(icon);
+    return fallback;
+  }
+
   if (book.coverId) {
     const cover = document.createElement("img");
     cover.src = `https://covers.openlibrary.org/b/id/${book.coverId}-M.jpg`;
@@ -61,28 +74,14 @@ function createBookCard(book) {
     cover.addEventListener(
       "error",
       () => {
-        cover.remove();
-
-        const fallback = document.createElement("div");
-        fallback.className =
-          "flex h-44 w-32 items-center justify-center rounded-lg bg-[#8b9a82] p-4 text-center text-white";
-        fallback.innerHTML =
-          '<i class="fa-solid fa-book-open text-3xl" aria-hidden="true"></i>';
-
-        coverArea.append(fallback);
+        cover.replaceWith(createFallbackCover());
       },
       { once: true }
     );
 
     coverArea.append(cover);
   } else {
-    const fallback = document.createElement("div");
-    fallback.className =
-      "flex h-44 w-32 items-center justify-center rounded-lg bg-[#8b9a82] p-4 text-white";
-    fallback.innerHTML =
-      '<i class="fa-solid fa-book-open text-3xl" aria-hidden="true"></i>';
-
-    coverArea.append(fallback);
+    coverArea.append(createFallbackCover());
   }
 
   const details = document.createElement("div");
@@ -103,7 +102,8 @@ function createBookCard(book) {
   author.textContent = `By ${book.author}`;
 
   const year = document.createElement("p");
-  year.className = "mt-4 border-t border-[#eeeae1] pt-4 text-sm text-[#777b70]";
+  year.className =
+    "mt-4 border-t border-[#eeeae1] pt-4 text-sm text-[#777b70]";
   year.textContent = `First published: ${book.year}`;
 
   const button = document.createElement("button");
@@ -175,19 +175,42 @@ bookGrid.addEventListener("click", (event) => {
   }
 });
 
+function showLoading(searchTerm) {
+  const spinner = document.createElement("span");
+  spinner.className =
+    "inline-block h-5 w-5 animate-spin rounded-full border-2 border-[#788a75] border-t-transparent";
+  spinner.setAttribute("aria-hidden", "true");
+
+  const message = document.createElement("span");
+  message.textContent = `Searching for "${searchTerm}"...`;
+
+  const container = document.createElement("div");
+  container.className =
+    "flex items-center justify-center gap-3 py-6";
+  container.setAttribute("role", "status");
+  container.append(spinner, message);
+
+  bookStatus.replaceChildren(container);
+}
+
 async function loadBooks(title = "romance") {
   const searchTerm = title.trim() || "romance";
 
-  bookStatus.textContent = `Searching for "${searchTerm}"...`;
+  showLoading(searchTerm);
   bookGrid.replaceChildren();
 
   try {
     const books = await fetchBooks(searchTerm);
 
-    if (books.length === 0) {
-      bookStatus.textContent = `No books found for "${searchTerm}".`;
-      return;
-    }
+   if (books.length === 0) {
+  bookStatus.textContent =
+    `No books found for "${searchTerm}". Try another title.`;
+
+  bookStatus.className =
+    "mt-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-red-700";
+
+  return;
+}
 
     const fragment = document.createDocumentFragment();
 
@@ -198,11 +221,16 @@ async function loadBooks(title = "romance") {
     bookGrid.append(fragment);
     bookStatus.textContent =
       `Showing ${books.length} books for "${searchTerm}".`;
-  } catch (error) {
-    console.error("Could not load books:", error);
-    bookStatus.textContent =
-      "We couldn't load the books. Please try again.";
-  }
+}
+  catch (error) {
+  console.error("Could not load books:", error);
+
+  bookStatus.textContent =
+    "We couldn't load the books. Please check your connection and try again.";
+
+  bookStatus.className =
+    "mt-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-red-700";
+}
 }
 
 searchForm.addEventListener("submit", (event) => {
