@@ -41,6 +41,28 @@ function addFavorite(book) {
   }
 }
 
+function updateFavoriteButtons() {
+  const favorites = getSavedFavorites();
+
+  addButtons.forEach((button) => {
+    const isFavorite = favorites.some(
+      (favorite) => favorite.id === button.dataset.bookId
+    );
+
+    if (isFavorite) {
+      button.innerHTML =
+        '<i class="fa-solid fa-heart" aria-hidden="true"></i> Added to Favorites';
+      button.disabled = true;
+      button.classList.add("opacity-70", "cursor-not-allowed");
+    } else {
+      button.innerHTML =
+        '<i class="fa-regular fa-heart" aria-hidden="true"></i> Add to Favorites';
+      button.disabled = false;
+      button.classList.remove("opacity-70", "cursor-not-allowed");
+    }
+  });
+}
+
 addButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const book = {
@@ -52,10 +74,7 @@ addButtons.forEach((button) => {
     const added = addFavorite(book);
 
     if (added) {
-      button.innerHTML =
-        '<i class="fa-solid fa-heart" aria-hidden="true"></i> Added to Favorites';
-      button.disabled = true;
-      button.classList.add("opacity-70", "cursor-not-allowed");
+      updateFavoriteButtons();
     } else {
       const favorites = getSavedFavorites();
       const alreadyFavorite = favorites.some(
@@ -63,13 +82,13 @@ addButtons.forEach((button) => {
       );
 
       if (alreadyFavorite) {
-        button.innerHTML =
-          '<i class="fa-solid fa-heart" aria-hidden="true"></i> Already Added';
-        button.disabled = true;
-        button.classList.add("opacity-70", "cursor-not-allowed");
+        updateFavoriteButtons();
       } else {
         button.textContent = "Could not save. Try again";
       }
     }
   });
 });
+
+
+updateFavoriteButtons();
