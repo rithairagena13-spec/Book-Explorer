@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A personal collection of unforgettable romance novels and timeless love stories." />
-  <meta name="theme-color" content="#241722" />
-  <title>My Reading Room </title>
+  <meta name="description" content="A personal reading room for the stories worth keeping." />
+  <meta name="theme-color" content="#29212a" />
+  <title>My Favorites | Book Explorer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,218 +15,274 @@
   <link rel="stylesheet" href="/input.css" />
 </head>
 
-<body class="min-h-screen bg-[#faf6f1] font-['DM_Sans'] text-[#2d222c] antialiased">
+<body class="min-h-screen bg-[#faf8f2] font-['DM_Sans'] text-[#29252b] antialiased">
 
-  <header class="bg-[#241722] text-[#fffaf5]">
+  <header class="border-b border-white/10 bg-[#29212a] text-[#faf8f2]">
     <nav class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5 sm:px-8 lg:px-12" aria-label="Main navigation">
       <a href="/" class="flex items-center gap-3" aria-label="Book Explorer home">
-        <span class="flex h-11 w-11 items-center justify-center rounded-full border border-[#d7a6b5]/50 text-[#e8bfca]"><i class="fa-solid fa-book-open" aria-hidden="true"></i></span>
-        <span class="text-lg font-bold tracking-tight sm:text-xl">Book Explorer<span class="ml-1 text-[#d7a6b5]">.</span></span>
+        <span class="flex h-11 w-11 items-center justify-center rounded-full border border-[#d8c6b2]/60 text-[#d8c6b2]">
+          <i class="fa-solid fa-book-open text-lg" aria-hidden="true"></i>
+        </span>
+        <span class="font-['Playfair_Display'] text-xl font-semibold tracking-tight sm:text-2xl">Book Explorer<span class="text-[#b9c5a8]">.</span></span>
       </a>
 
-      <div class="flex items-center gap-3 text-sm font-medium sm:gap-6">
-        <a href="/" class="text-[#d8cbd4] transition hover:text-white">Home</a>
-        <a href="/favorites.html" aria-current="page" class="rounded-full bg-[#f0dce2] px-4 py-2.5 font-semibold text-[#49263a] transition hover:bg-white"><i class="fa-solid fa-heart mr-1.5" aria-hidden="true"></i> Favorites</a>
+      <div class="flex items-center gap-3 text-sm font-semibold sm:gap-6">
+        <a href="/" class="rounded-full px-3 py-2 text-[#e2dce0] transition hover:text-white">Home</a>
+        <a href="/favorites.html" aria-current="page" class="rounded-full bg-[#f3e8e1] px-4 py-2.5 text-[#763e50] transition hover:bg-white">
+          <i class="fa-solid fa-heart mr-1.5" aria-hidden="true"></i> Favorites
+        </a>
       </div>
     </nav>
   </header>
 
   <main id="main-content">
 
-   
-    <section class="relative overflow-hidden border-b border-[#eadbd9] bg-[#f3e7e4]">
-      <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[1.1fr_0.9fr] lg:px-12 lg:py-24">
+    <section class="relative overflow-hidden border-b border-[#e7dfd2] bg-[#f1e9dd]">
+      <div class="pointer-events-none absolute -right-16 -top-20 h-72 w-72 rounded-full border border-[#b3bba1]/40 sm:h-96 sm:w-96"></div>
+      <div class="pointer-events-none absolute -right-5 -top-10 h-64 w-64 rounded-full border border-[#b3bba1]/30 sm:h-80 sm:w-80"></div>
 
+      <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[1fr_0.85fr] lg:px-12 lg:py-24">
         <div class="relative z-10">
-          <p class="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.24em] text-[#96566d]">
-            <span class="h-px w-8 bg-[#96566d]"></span>
-            Your personal reading room
+          <p class="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.24em] text-[#65755b]">
+            <span class="h-px w-9 bg-[#8d9b7e]"></span>
+            The curated reading room
           </p>
 
-          <h1 class="max-w-2xl font-['Playfair_Display'] text-5xl font-medium leading-[1.1] tracking-tight sm:text-6xl lg:text-7xl">
-            Keep the stories <span class="italic text-[#a45d75]">close.</span>
+          <h1 class="max-w-xl font-['Playfair_Display'] text-5xl font-medium leading-[1.08] tracking-tight sm:text-6xl lg:text-7xl">
+            My favorite <span class="italic text-[#718267]">books.</span>
           </h1>
 
-          <p class="mt-6 max-w-xl text-base leading-8 text-[#71616c] sm:text-lg">
-            A little shelf for the novels that move you, the characters you remember, and the love stories you want to revisit.
+          <p class="mt-6 max-w-lg text-base leading-8 text-[#6d6665] sm:text-lg">
+            Some stories deserve more than a single read. This is your little corner for the characters, words, and love stories that stay with you.
           </p>
 
-          <div class="mt-8 flex flex-wrap items-center gap-4">
-            <a href="#book-list" class="inline-flex items-center gap-3 rounded-full bg-[#382537] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#382537]/10 transition hover:-translate-y-0.5 hover:bg-[#51364d]">
-              Browse the bookshelf <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+          <div class="mt-8 flex flex-wrap items-center gap-5">
+            <a href="#book-list" class="inline-flex items-center gap-3 rounded-full bg-[#354632] px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#354632]/10 transition hover:-translate-y-0.5 hover:bg-[#263725]">
+              Visit my bookshelf <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
             </a>
-            <span class="text-sm font-medium text-[#806d78]"><i class="fa-regular fa-bookmark mr-2 text-[#a45d75]" aria-hidden="true"></i> A collection made personal</span>
+            <span class="flex items-center gap-2 text-sm font-medium text-[#65755b]">
+              <i class="fa-solid fa-bookmark" aria-hidden="true"></i> A collection of stories
+            </span>
           </div>
 
-          <div class="mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-[#ddc9ca] pt-5 text-xs font-semibold uppercase tracking-[0.12em] text-[#806d78]">
-            <span><i class="fa-solid fa-book-open mr-2 text-[#a45d75]" aria-hidden="true"></i>Timeless classics</span>
-            <span><i class="fa-solid fa-heart mr-2 text-[#a45d75]" aria-hidden="true"></i>Memorable romances</span>
+          <div class="mt-10 flex items-center gap-4 border-t border-[#d9d0c1] pt-6">
+            <span class="flex h-12 w-12 items-center justify-center rounded-full border border-[#9ba88c] text-xl text-[#53674c]">
+              <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            </span>
+            <div>
+              <p class="text-2xl font-semibold text-[#354632]">03 <span class="text-sm font-medium">stories</span></p>
+              <p class="text-xs uppercase tracking-[0.16em] text-[#77716a]">Saved for another chapter</p>
+            </div>
           </div>
         </div>
 
-        <!-- Reading list illustration -->
-        <div class="relative mx-auto flex w-full max-w-md items-center justify-center py-5 sm:py-8">
-          <div class="absolute right-3 top-3 h-64 w-64 rounded-full bg-[#d8b4bd]/35 blur-3xl sm:right-8 sm:h-80 sm:w-80"></div>
+    
+        <div class="relative mx-auto flex min-h-[330px] w-full max-w-lg items-center justify-center sm:min-h-[390px]">
+          <div class="absolute h-64 w-64 rounded-full bg-[#c9c9b0]/50 blur-3xl sm:h-80 sm:w-80"></div>
 
-          <div class="relative w-full max-w-sm rounded-[2rem] border border-white/80 bg-[#fffaf5]/75 p-5 shadow-xl shadow-[#6d4657]/10 backdrop-blur-sm sm:p-7">
-            <div class="flex items-center justify-between border-b border-[#eadbd9] pb-4">
-              <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#96566d]">The reading list</span>
-              <i class="fa-solid fa-sparkles text-[#b77b8d]" aria-hidden="true"></i>
-            </div>
-
-            <div class="flex items-center gap-4 border-b border-[#eadbd9] py-5">
-              <div class="flex h-20 w-14 shrink-0 items-center justify-center bg-[#e8d9c5] text-[#80634d] shadow-md"><i class="fa-solid fa-leaf text-xl" aria-hidden="true"></i></div>
+          <div class="relative flex items-end justify-center gap-2 sm:gap-3">
+            <div class="flex h-48 w-24 -rotate-[9deg] flex-col items-center justify-between border border-[#b8a98d] bg-[#d7c7ad] px-2 py-4 text-center shadow-xl sm:h-60 sm:w-32 sm:px-3">
+              <span class="text-[7px] uppercase tracking-[0.18em] text-[#5e5b43] sm:text-[9px]">Jane Austen</span>
               <div>
-                <p class="font-['Playfair_Display'] text-lg font-semibold">Pride and Prejudice</p>
-                <p class="mt-1 text-sm text-[#887681]">Jane Austen</p>
-                <p class="mt-2 text-[10px] font-bold uppercase tracking-[0.16em] text-[#a16b7c]">A timeless classic</p>
+                <i class="fa-solid fa-leaf text-xl text-[#68775a] sm:text-2xl" aria-hidden="true"></i>
+                <p class="mt-3 font-['Playfair_Display'] text-sm leading-tight text-[#454b37] sm:text-xl">Pride &amp; Prejudice</p>
               </div>
+              <span class="text-[7px] uppercase tracking-widest text-[#5e5b43]">A classic</span>
             </div>
 
-            <div class="flex items-center gap-4 border-b border-[#eadbd9] py-5">
-              <div class="flex h-20 w-14 shrink-0 items-center justify-center bg-[#e8cbd3] text-[#985d70] shadow-md"><i class="fa-solid fa-spa text-xl" aria-hidden="true"></i></div>
+            <div class="z-10 flex h-60 w-28 flex-col items-center justify-between border border-[#bd8f92] bg-[#e4c3c0] px-2 py-5 text-center shadow-2xl sm:h-72 sm:w-36 sm:px-3">
+              <span class="text-[7px] uppercase tracking-[0.18em] text-[#7c4b50] sm:text-[9px]">Charlotte Brontë</span>
               <div>
-                <p class="font-['Playfair_Display'] text-lg font-semibold">Jane Eyre</p>
-                <p class="mt-1 text-sm text-[#887681]">Charlotte Brontë</p>
-                <p class="mt-2 text-[10px] font-bold uppercase tracking-[0.16em] text-[#a16b7c]">Courage and devotion</p>
+                <i class="fa-solid fa-spa text-2xl text-[#9b666c] sm:text-3xl" aria-hidden="true"></i>
+                <p class="mt-3 font-['Playfair_Display'] text-xl italic leading-tight text-[#653f46] sm:text-2xl">Jane Eyre</p>
               </div>
+              <span class="text-[7px] uppercase tracking-widest text-[#7c4b50]">Love &amp; courage</span>
             </div>
 
-            <div class="flex items-center gap-4 pt-5">
-              <div class="flex h-20 w-14 shrink-0 items-center justify-center bg-[#d9cfe2] text-[#78658a] shadow-md"><i class="fa-solid fa-butterfly text-xl" aria-hidden="true"></i></div>
+            <div class="flex h-52 w-24 rotate-[8deg] flex-col items-center justify-between border border-[#aaa0b9] bg-[#d1c9db] px-2 py-4 text-center shadow-xl sm:h-64 sm:w-32 sm:px-3">
+              <span class="text-[7px] uppercase tracking-[0.18em] text-[#635575] sm:text-[9px]">Jojo Moyes</span>
               <div>
-                <p class="font-['Playfair_Display'] text-lg font-semibold">Me Before You</p>
-                <p class="mt-1 text-sm text-[#887681]">Jojo Moyes</p>
-                <p class="mt-2 text-[10px] font-bold uppercase tracking-[0.16em] text-[#a16b7c]">A modern love story</p>
+                <i class="fa-solid fa-butterfly text-xl text-[#78658e] sm:text-2xl" aria-hidden="true"></i>
+                <p class="mt-3 font-['Playfair_Display'] text-sm leading-tight text-[#4f405d] sm:text-xl">Me Before You</p>
               </div>
+              <span class="text-[7px] uppercase tracking-widest text-[#635575]">A modern story</span>
             </div>
+          </div>
 
-            <div class="mt-6 flex items-center gap-3 rounded-xl bg-[#f3e7e4] px-4 py-3 text-sm text-[#765b68]">
-              <i class="fa-solid fa-heart text-[#a45d75]" aria-hidden="true"></i>
-              <span>Every book holds a different kind of magic.</span>
-            </div>
+          <div class="absolute bottom-1 right-1 rotate-6 text-right font-['Playfair_Display'] italic text-[#6b7a5f] sm:bottom-3 sm:right-0">
+            <p class="text-lg sm:text-xl">Stories to keep,</p>
+            <p class="text-lg sm:text-xl">memories to revisit.</p>
+            <i class="fa-solid fa-leaf mt-2" aria-hidden="true"></i>
           </div>
         </div>
       </div>
     </section>
 
-  
+    <!-- Favorite collection -->
     <section class="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20 lg:px-12">
-      <div class="mb-10 flex flex-col gap-5 border-b border-[#e5d8d9] pb-7 sm:flex-row sm:items-end sm:justify-between">
+      <div class="mb-10 flex flex-col gap-5 border-b border-[#e3ddd1] pb-7 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#a05c73]">Chapter one · Your bookshelf</p>
-          <h2 id="books-heading" class="font-['Playfair_Display'] text-3xl font-semibold sm:text-4xl">Romance worth remembering<span class="text-[#a45d75]">.</span></h2>
-          <p class="mt-3 max-w-xl text-sm leading-7 text-[#776974]">Three different journeys, each with a story to tell. Which one will find its way into your heart?</p>
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#718267]">Your personal collection</p>
+          <h2 id="books-heading" class="font-['Playfair_Display'] text-3xl font-medium leading-tight sm:text-4xl">
+            A collection of<br class="hidden sm:block" /> timeless love stories<span class="text-[#718267]">.</span>
+          </h2>
+          <p class="mt-3 max-w-lg text-sm leading-7 text-[#77706c]">Each book has its own world. Keep the ones you want to return to.</p>
         </div>
 
-        <span class="inline-flex w-fit items-center gap-2 rounded-full border border-[#e5cbd3] bg-white/80 px-4 py-2 text-sm font-semibold text-[#77475d]">
-          <i class="fa-solid fa-bookmark" aria-hidden="true"></i> Curated romance novels
+        <span class="inline-flex w-fit items-center gap-2 rounded-full border border-[#d9dfcf] bg-[#f0f1e8] px-4 py-2.5 text-sm font-semibold text-[#52644b]">
+          <i class="fa-solid fa-heart" aria-hidden="true"></i> The romance collection
         </span>
       </div>
 
-      <div id="book-list" class="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
+      <div id="book-list" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
         
-        <article data-book-card="1" class="group overflow-hidden rounded-3xl border border-[#e8dcda] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#51334f]/10">
-          <div class="relative flex h-72 items-center justify-center overflow-hidden bg-[#eee4d5] p-7">
-            <span class="absolute left-5 top-5 text-[10px] font-bold uppercase tracking-[0.2em] text-[#765a46]">The classics</span>
-            <div class="relative flex h-56 w-40 flex-col items-center justify-between border border-[#c3a789] bg-[#f7efdf] px-4 py-5 text-center shadow-xl transition duration-300 group-hover:rotate-1">
-              <span class="absolute inset-1 border border-[#c3a789]/70"></span>
-              <span class="relative text-[8px] uppercase tracking-[0.25em] text-[#8b6849]">Jane Austen</span>
+        <article data-book-card="1" class="group overflow-hidden rounded-2xl border border-[#e3dccf] bg-[#fffdf8] transition duration-300 hover:-translate-y-1 hover:border-[#a8b39a] hover:shadow-xl hover:shadow-[#53674c]/10">
+          <div class="relative flex min-h-64 items-center justify-center overflow-hidden bg-[#e9e5d6] p-7">
+            <span class="absolute left-5 top-5 text-[10px] font-bold uppercase tracking-[0.2em] text-[#68775a]">01 / The classics</span>
+            <div class="relative flex h-52 w-36 flex-col items-center justify-between border border-[#a99b78] bg-[#f3ecd9] px-3 py-5 text-center shadow-xl transition duration-300 group-hover:rotate-1">
+              <span class="absolute inset-1 border border-[#b6a785]/70"></span>
+              <span class="relative text-[8px] uppercase tracking-[0.2em] text-[#7d7557]">Jane Austen</span>
               <div class="relative">
-                <i class="fa-solid fa-leaf text-2xl text-[#9b8064]" aria-hidden="true"></i>
-                <h3 class="mt-3 font-['Playfair_Display'] text-2xl leading-tight text-[#5b453b]">Pride &amp;<br />Prejudice</h3>
+                <i class="fa-solid fa-leaf text-2xl text-[#718267]" aria-hidden="true"></i>
+                <h3 class="mt-3 font-['Playfair_Display'] text-xl leading-tight text-[#4c513c]">Pride &amp;<br />Prejudice</h3>
               </div>
-              <span class="relative text-[8px] uppercase tracking-[0.2em] text-[#8b6849]">A timeless novel</span>
+              <span class="relative text-[8px] uppercase tracking-[0.18em] text-[#7d7557]">A timeless novel</span>
             </div>
-            <span class="absolute bottom-5 right-5 rounded-full bg-white/85 px-3 py-1.5 text-xs font-semibold text-[#765a46]">01 / Classic</span>
           </div>
 
-          <div class="p-6 sm:p-7">
-            <p class="text-xs font-bold uppercase tracking-[0.18em] text-[#9b775a]">Love &amp; first impressions</p>
-            <h3 class="mt-3 font-['Playfair_Display'] text-2xl font-semibold">Pride and Prejudice</h3>
-            <p class="mt-1 text-sm text-[#8b7a83]">Jane Austen</p>
-            <p class="mt-4 text-sm leading-7 text-[#776974]">A witty, enduring romance about first impressions, family expectations, and discovering the truth behind the heart.</p>
-            <button type="button" data-book-id="1" aria-pressed="false" aria-label="Add Pride and Prejudice to favorites" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#b78d71] px-5 py-3 text-sm font-semibold text-[#76543f] transition duration-200 hover:bg-[#76543f] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#76543f]">
-              <i class="fa-regular fa-heart" aria-hidden="true"></i><span>Add to Favorites</span>
-            </button>
+          <div class="p-6">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-[#718267]">Love &amp; first impressions</p>
+                <h3 class="mt-2 font-['Playfair_Display'] text-2xl font-semibold">Pride and Prejudice</h3>
+                <p class="mt-1 text-sm text-[#817972]">Jane Austen</p>
+              </div>
+              <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#e9eddf] text-[#53674c]" aria-hidden="true">
+                <i class="fa-solid fa-heart"></i>
+              </span>
+            </div>
+            <p class="mt-4 text-sm leading-7 text-[#706a66]">A witty, enduring romance about first impressions, family expectations, and discovering the truth behind the heart.</p>
+            <div class="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-[#eee8de] pt-4">
+              <span class="inline-flex items-center gap-2 rounded-full bg-[#eff0e7] px-3 py-2 text-xs font-medium text-[#59664f]">
+                <i class="fa-solid fa-bookmark" aria-hidden="true"></i> A timeless classic
+              </span>
+              <button type="button" data-book-id="1" aria-pressed="false" aria-label="Remove Pride and Prejudice from favorites" class="inline-flex items-center gap-2 rounded-full border border-[#b67b80] px-3.5 py-2 text-xs font-semibold text-[#98565f] transition hover:bg-[#98565f] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#98565f]">
+                <i class="fa-solid fa-trash-can" aria-hidden="true"></i> Remove
+              </button>
+            </div>
+          </div>
+        </article>
+
+    
+        <article data-book-card="2" class="group overflow-hidden rounded-2xl border border-[#e3dccf] bg-[#fffdf8] transition duration-300 hover:-translate-y-1 hover:border-[#c69c9b] hover:shadow-xl hover:shadow-[#8c5961]/10">
+          <div class="relative flex min-h-64 items-center justify-center overflow-hidden bg-[#eee0dc] p-7">
+            <span class="absolute left-5 top-5 text-[10px] font-bold uppercase tracking-[0.2em] text-[#965e67]">02 / The great romances</span>
+            <div class="relative flex h-52 w-36 flex-col items-center justify-between border border-[#bc8d91] bg-gradient-to-br from-[#f8eeea] to-[#dcb9b8] px-3 py-5 text-center shadow-xl transition duration-300 group-hover:-rotate-1">
+              <span class="absolute inset-1 border border-[#bc8d91]/70"></span>
+              <span class="relative text-[8px] uppercase tracking-[0.18em] text-[#8b555e]">Charlotte Brontë</span>
+              <div class="relative">
+                <i class="fa-solid fa-spa text-2xl text-[#a36c75]" aria-hidden="true"></i>
+                <h3 class="mt-3 font-['Playfair_Display'] text-2xl italic leading-tight text-[#683f49]">Jane<br />Eyre</h3>
+              </div>
+              <span class="relative text-[8px] uppercase tracking-[0.18em] text-[#8b555e]">A story of courage</span>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-[#a36c75]">Independence &amp; devotion</p>
+                <h3 class="mt-2 font-['Playfair_Display'] text-2xl font-semibold">Jane Eyre</h3>
+                <p class="mt-1 text-sm text-[#817972]">Charlotte Brontë</p>
+              </div>
+              <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#f3e5e3] text-[#965e67]" aria-hidden="true">
+                <i class="fa-solid fa-heart"></i>
+              </span>
+            </div>
+            <p class="mt-4 text-sm leading-7 text-[#706a66]">A powerful novel of love, independence, and a young woman's determination to remain true to herself.</p>
+            <div class="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-[#eee8de] pt-4">
+              <span class="inline-flex items-center gap-2 rounded-full bg-[#f3e9e5] px-3 py-2 text-xs font-medium text-[#89545e]">
+                <i class="fa-solid fa-bookmark" aria-hidden="true"></i> Courage &amp; devotion
+              </span>
+              <button type="button" data-book-id="2" aria-pressed="false" aria-label="Remove Jane Eyre from favorites" class="inline-flex items-center gap-2 rounded-full border border-[#b67b80] px-3.5 py-2 text-xs font-semibold text-[#98565f] transition hover:bg-[#98565f] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#98565f]">
+                <i class="fa-solid fa-trash-can" aria-hidden="true"></i> Remove
+              </button>
+            </div>
           </div>
         </article>
 
         
-        <article data-book-card="2" class="group overflow-hidden rounded-3xl border border-[#e8dcda] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#51334f]/10">
-          <div class="relative flex h-72 items-center justify-center overflow-hidden bg-[#f2e2e5] p-7">
-            <span class="absolute left-5 top-5 text-[10px] font-bold uppercase tracking-[0.2em] text-[#94566a]">The great romances</span>
-            <div class="relative flex h-56 w-40 flex-col items-center justify-between border border-[#c38a9c] bg-gradient-to-br from-[#fbf0f1] to-[#dfb7c3] px-4 py-5 text-center shadow-xl transition duration-300 group-hover:-rotate-1">
-              <span class="absolute inset-1 border border-[#c38a9c]/70"></span>
-              <span class="relative text-[8px] uppercase tracking-[0.25em] text-[#94566a]">Charlotte Brontë</span>
+        <article data-book-card="3" class="group overflow-hidden rounded-2xl border border-[#e3dccf] bg-[#fffdf8] transition duration-300 hover:-translate-y-1 hover:border-[#aaa0bf] hover:shadow-xl hover:shadow-[#74638c]/10 sm:col-span-2 lg:col-span-1">
+          <div class="relative flex min-h-64 items-center justify-center overflow-hidden bg-[#e7e3ed] p-7">
+            <span class="absolute left-5 top-5 text-[10px] font-bold uppercase tracking-[0.2em] text-[#77678c]">03 / Modern love stories</span>
+            <div class="relative flex h-52 w-36 flex-col items-center justify-between border border-[#a79ab8] bg-gradient-to-br from-[#f3eff6] to-[#cbc0d9] px-3 py-5 text-center shadow-xl transition duration-300 group-hover:rotate-1">
+              <span class="absolute inset-1 border border-[#a79ab8]/70"></span>
+              <span class="relative text-[8px] uppercase tracking-[0.18em] text-[#6d5a83]">Jojo Moyes</span>
               <div class="relative">
-                <i class="fa-solid fa-spa text-2xl text-[#a15e70]" aria-hidden="true"></i>
-                <h3 class="mt-3 font-['Playfair_Display'] text-3xl italic leading-tight text-[#663b4c]">Jane<br />Eyre</h3>
+                <i class="fa-solid fa-butterfly text-2xl text-[#816c98]" aria-hidden="true"></i>
+                <h3 class="mt-3 font-['Playfair_Display'] text-xl leading-tight text-[#51405f]">Me Before<br />You</h3>
               </div>
-              <span class="relative text-[8px] uppercase tracking-[0.2em] text-[#94566a]">A story of courage</span>
+              <span class="relative text-[8px] uppercase tracking-[0.18em] text-[#6d5a83]">A contemporary novel</span>
             </div>
-            <span class="absolute bottom-5 right-5 rounded-full bg-white/85 px-3 py-1.5 text-xs font-semibold text-[#94566a]">02 / Classic</span>
           </div>
 
-          <div class="p-6 sm:p-7">
-            <p class="text-xs font-bold uppercase tracking-[0.18em] text-[#a15e70]">Independence &amp; devotion</p>
-            <h3 class="mt-3 font-['Playfair_Display'] text-2xl font-semibold">Jane Eyre</h3>
-            <p class="mt-1 text-sm text-[#8b7a83]">Charlotte Brontë</p>
-            <p class="mt-4 text-sm leading-7 text-[#776974]">A powerful novel of love, independence, and a young woman's determination to remain true to herself.</p>
-            <button type="button" data-book-id="2" aria-pressed="false" aria-label="Add Jane Eyre to favorites" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#b76e82] px-5 py-3 text-sm font-semibold text-[#94566a] transition duration-200 hover:bg-[#b76e82] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#94566a]">
-              <i class="fa-regular fa-heart" aria-hidden="true"></i><span>Add to Favorites</span>
-            </button>
-          </div>
-        </article>
-
-        
-        <article data-book-card="3" class="group overflow-hidden rounded-3xl border border-[#e8dcda] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#51334f]/10 sm:col-span-2 lg:col-span-1">
-          <div class="relative flex h-72 items-center justify-center overflow-hidden bg-[#e8e2ee] p-7">
-            <span class="absolute left-5 top-5 text-[10px] font-bold uppercase tracking-[0.2em] text-[#705a7b]">Modern love stories</span>
-            <div class="relative flex h-56 w-40 flex-col items-center justify-between border border-[#a997b8] bg-gradient-to-br from-[#f4eff7] to-[#cbbcd8] px-4 py-5 text-center shadow-xl transition duration-300 group-hover:rotate-1">
-              <span class="absolute inset-1 border border-[#a997b8]/70"></span>
-              <span class="relative text-[8px] uppercase tracking-[0.25em] text-[#705a7b]">Jojo Moyes</span>
-              <div class="relative">
-                <i class="fa-solid fa-butterfly text-2xl text-[#81638d]" aria-hidden="true"></i>
-                <h3 class="mt-3 font-['Playfair_Display'] text-3xl leading-tight text-[#4f3a5e]">Me Before<br />You</h3>
+          <div class="p-6">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-[#816c98]">Connection &amp; change</p>
+                <h3 class="mt-2 font-['Playfair_Display'] text-2xl font-semibold">Me Before You</h3>
+                <p class="mt-1 text-sm text-[#817972]">Jojo Moyes</p>
               </div>
-              <span class="relative text-[8px] uppercase tracking-[0.2em] text-[#705a7b]">A contemporary novel</span>
+              <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#ebe6f1] text-[#77678c]" aria-hidden="true">
+                <i class="fa-solid fa-heart"></i>
+              </span>
             </div>
-            <span class="absolute bottom-5 right-5 rounded-full bg-white/85 px-3 py-1.5 text-xs font-semibold text-[#705a7b]">03 / Contemporary</span>
-          </div>
-
-          <div class="p-6 sm:p-7">
-            <p class="text-xs font-bold uppercase tracking-[0.18em] text-[#81638d]">Connection &amp; change</p>
-            <h3 class="mt-3 font-['Playfair_Display'] text-2xl font-semibold">Me Before You</h3>
-            <p class="mt-1 text-sm text-[#8b7a83]">Jojo Moyes</p>
-            <p class="mt-4 text-sm leading-7 text-[#776974]">A contemporary love story about unexpected connections, difficult choices, and the ways relationships change us.</p>
-            <button type="button" data-book-id="3" aria-pressed="false" aria-label="Add Me Before You to favorites" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#81638d] px-5 py-3 text-sm font-semibold text-[#72537e] transition duration-200 hover:bg-[#81638d] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#72537e]">
-              <i class="fa-regular fa-heart" aria-hidden="true"></i><span>Add to Favorites</span>
-            </button>
+            <p class="mt-4 text-sm leading-7 text-[#706a66]">A contemporary love story about unexpected connections, difficult choices, and the ways relationships change us.</p>
+            <div class="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-[#eee8de] pt-4">
+              <span class="inline-flex items-center gap-2 rounded-full bg-[#eeeaf3] px-3 py-2 text-xs font-medium text-[#6e5d83]">
+                <i class="fa-solid fa-bookmark" aria-hidden="true"></i> A modern love story
+              </span>
+              <button type="button" data-book-id="3" aria-pressed="false" aria-label="Remove Me Before You from favorites" class="inline-flex items-center gap-2 rounded-full border border-[#b67b80] px-3.5 py-2 text-xs font-semibold text-[#98565f] transition hover:bg-[#98565f] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#98565f]">
+                <i class="fa-solid fa-trash-can" aria-hidden="true"></i> Remove
+              </button>
+            </div>
           </div>
         </article>
 
       </div>
     </section>
 
-   
-    <section class="border-y border-[#ead9dd] bg-[#f1e5e5]">
-      <div class="mx-auto grid max-w-7xl gap-8 px-5 py-12 sm:px-8 md:grid-cols-[1fr_auto] md:items-center lg:px-12 lg:py-16">
-        <div>
-          <p class="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#a05c73]">A note between chapters</p>
-          <h2 class="max-w-2xl font-['Playfair_Display'] text-3xl font-medium leading-tight sm:text-4xl">Every reader deserves a story that feels like their own.</h2>
-          <p class="mt-4 max-w-xl text-sm leading-7 text-[#776974]">Build your collection around the characters, moments, and love stories you never want to forget.</p>
+
+    <section class="mx-auto max-w-7xl px-5 pb-14 sm:px-8 sm:pb-20 lg:px-12">
+      <div class="relative overflow-hidden rounded-2xl border border-[#e0e2d5] bg-[#e9ecdf] px-6 py-10 text-center sm:px-12 sm:py-14">
+        <i class="fa-solid fa-leaf pointer-events-none absolute -bottom-5 -left-3 -rotate-45 text-8xl text-[#8d9b7e]/20 sm:text-9xl" aria-hidden="true"></i>
+        <i class="fa-solid fa-seedling pointer-events-none absolute -right-2 -top-4 rotate-12 text-7xl text-[#8d9b7e]/20 sm:text-8xl" aria-hidden="true"></i>
+
+        <div class="relative mx-auto max-w-2xl">
+          <span class="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-[#a8b39a] text-2xl text-[#53674c]">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+          </span>
+          <p class="mt-5 text-xs font-bold uppercase tracking-[0.22em] text-[#65755b]">A little note to every reader</p>
+          <h2 class="mt-3 font-['Playfair_Display'] text-3xl font-medium leading-tight sm:text-4xl">
+            The best stories stay with us<span class="text-[#718267]">.</span>
+          </h2>
+          <p class="mx-auto mt-4 max-w-lg text-sm leading-7 text-[#6d7165]">
+            Your reading journey is yours to shape. Discover another story, find a new favorite, and keep turning the pages.
+          </p>
+          <a href="/" class="mt-7 inline-flex items-center gap-3 rounded-full bg-[#354632] px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#263725]">
+            <i class="fa-solid fa-bookmark" aria-hidden="true"></i> Discover more books
+          </a>
         </div>
-        <a href="/" class="inline-flex w-fit items-center gap-3 rounded-full bg-[#2d222c] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#51334f]">Discover more books <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
       </div>
     </section>
+
   </main>
 
-  <footer class="bg-[#241722] text-[#d8cbd4]">
+  <footer class="bg-[#29212a] text-[#e1d9df]">
     <div class="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-7 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
-      <a href="/" class="font-bold tracking-tight text-white">Book Explorer<span class="text-[#e8bfca]">.</span></a>
-      <p>Made for the stories that stay with us.</p>
+      <a href="/" class="font-['Playfair_Display'] text-lg font-semibold text-white">Book Explorer<span class="text-[#b9c5a8]">.</span></a>
+      <p class="text-[#c5b9c2]">For the stories that stay with us.</p>
       <a href="/" class="transition hover:text-white">Back to Home <i class="fa-solid fa-arrow-right ml-1" aria-hidden="true"></i></a>
     </div>
   </footer>
