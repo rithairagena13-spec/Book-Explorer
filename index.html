@@ -76,8 +76,7 @@
       <p class="mt-6 max-w-md text-sm leading-7 text-[#53584f] sm:text-base sm:leading-8">
         Explore a world of books, discover new perspectives, and find stories that stay with you.
       </p>
-
-      <form action="#books" class="mt-7 flex max-w-md items-center gap-2 rounded-full border border-white/80 bg-white/95 p-1.5 shadow-sm">
+     <form id="book-search-form" class="mt-7 flex max-w-md items-center gap-2 rounded-full border border-white/80 bg-white/95 p-1.5 shadow-sm">
         <label for="book-search" class="pl-4 text-[#687b68]">
           <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
           <span class="sr-only">Search books</span>
@@ -86,9 +85,10 @@
         <input
           id="book-search"
           type="search"
+          name="title"
+          required
           placeholder="Search for books, authors, or genres..."
-          class="min-w-0 flex-1 bg-transparent py-2.5 text-xs text-[#292e29] outline-none placeholder:text-[#999a90] sm:text-sm"
-        />
+          class="min-w-0 flex-1 bg-transparent py-2.5 text-xs text-[#292e29] outline-none placeholder:text-[#999a90] sm:text-sm">
 
         <button
           type="submit"
