@@ -1,4 +1,5 @@
 
+
 const defaultFavorites = [
   {
     id: "1",
@@ -51,8 +52,10 @@ let favorites = loadFavorites();
 function saveFavorites() {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites));
+    return true;
   } catch (error) {
     console.error("Could not save favorites:", error);
+    return false;
   }
 }
 
@@ -70,8 +73,7 @@ export function addFavorite(book) {
   }
 
   favorites.push(book);
-  saveFavorites();
-  return true;
+  return saveFavorites();
 }
 
 export function removeFavorite(bookId) {
@@ -83,9 +85,70 @@ export function removeFavorite(bookId) {
     return false;
   }
 
+  const removedBook = favorites[index];
   favorites.splice(index, 1);
-  saveFavorites();
+
+  if (!saveFavorites()) {
+    favorites.splice(index, 0, removedBook);
+    return false;
+  }
+
   return true;
+}
+
+function createBookCard(book, originalCard) {
+  const card = originalCard
+    ? originalCard.cloneNode(true)
+    : document.querySelector("[data-book-card]")?.cloneNode(true);
+
+  if (!card) {
+    return null;
+  }
+
+  card.dataset.bookCard = book.id;
+
+  const title = card.querySelector("h3");
+  const author = card.querySelector("h3 + p");
+
+  if (title) {
+    title.textContent = book.title;
+  }
+
+  if (author) {
+    author.textContent = `by ${book.author}`;
+  }
+
+  const cover = card.querySelector("div > div span");
+  const coverContainer = card.querySelector(
+    "div.flex.h-36.w-28 > div"
+  );
+
+  if (cover) {
+    cover.textContent = book.title;
+  }
+
+  if (coverContainer) {
+    const coverTitle = coverContainer.querySelector("span");
+
+    if (coverTitle) {
+      coverTitle.textContent = book.title;
+    }
+
+    const coverAuthor = coverContainer.querySelectorAll("span")[1];
+
+    if (coverAuthor) {
+      coverAuthor.textContent = book.author;
+    }
+  }
+
+  const removeButton = card.querySelector("[data-book-id]");
+
+  if (removeButton) {
+    removeButton.dataset.bookId = book.id;
+    removeButton.setAttribute("aria-pressed", "true");
+  }
+
+  return card;
 }
 
 function updateFavoritesPage() {
@@ -97,43 +160,45 @@ function updateFavoritesPage() {
     return;
   }
 
-  const favoriteBooks = getFavorites();
-  const favoriteIds = new Set(
-    favoriteBooks.map((book) => book.id)
-  );
+  const originalCards = new Map();
 
   bookList.querySelectorAll("[data-book-card]").forEach((card) => {
-    const button = card.querySelector("[data-book-id]");
+    originalCards.set(card.dataset.bookCard, card);
+  });
 
-    if (button && !favoriteIds.has(button.dataset.bookId)) {
-      card.remove();
+  const templateCard =
+    bookList.querySelector("[data-book-card]") ||
+    originalCards.values().next().value;
+
+  const fragment = document.createDocumentFragment();
+
+  getFavorites().forEach((book) => {
+    const originalCard =
+      originalCards.get(book.id) || templateCard;
+
+    const card = createBookCard(book, originalCard);
+
+    if (card) {
+      fragment.append(card);
     }
   });
 
-  favoritesCount.textContent = favoriteBooks.length;
-  emptyState.classList.toggle("hidden", favoriteBooks.length > 0);
+  bookList.replaceChildren(fragment);
+
+  favoritesCount.textContent = favorites.length;
+  emptyState.classList.toggle("hidden", favorites.length > 0);
 }
 
 function handleFavoriteClick(event) {
-  const removeButton = event.target.closest("[data-book-id]");
+  const removeButton = event.target.closest("button[data-book-id]");
 
   if (!removeButton) {
     return;
   }
 
-  const removed = removeFavorite(removeButton.dataset.bookId);
-
-  if (!removed) {
-    return;
+  if (removeFavorite(removeButton.dataset.bookId)) {
+    updateFavoritesPage();
   }
-
-  const bookCard = removeButton.closest("[data-book-card]");
-
-  if (bookCard) {
-    bookCard.remove();
-  }
-
-  updateFavoritesPage();
 }
 
 function initializeFavoritesPage() {
@@ -143,7 +208,6 @@ function initializeFavoritesPage() {
     return;
   }
 
-  
   if (localStorage.getItem(STORAGE_KEY) === null) {
     saveFavorites();
   }
@@ -153,4 +217,3 @@ function initializeFavoritesPage() {
 }
 
 initializeFavoritesPage();
-
