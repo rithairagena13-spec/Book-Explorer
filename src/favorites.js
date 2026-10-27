@@ -1,5 +1,5 @@
 
-const favorites = [
+const defaultFavorites = [
   {
     id: "1",
     title: "Pride and Prejudice",
@@ -17,6 +17,45 @@ const favorites = [
   },
 ];
 
+const STORAGE_KEY = "bookExplorerFavorites";
+
+function loadFavorites() {
+  try {
+    const savedFavorites = localStorage.getItem(STORAGE_KEY);
+
+    if (savedFavorites !== null) {
+      const parsedFavorites = JSON.parse(savedFavorites);
+
+      if (
+        Array.isArray(parsedFavorites) &&
+        parsedFavorites.every(
+          (book) =>
+            book &&
+            typeof book.id === "string" &&
+            typeof book.title === "string" &&
+            typeof book.author === "string"
+        )
+      ) {
+        return parsedFavorites;
+      }
+    }
+  } catch (error) {
+    console.error("Could not load favorites:", error);
+  }
+
+  return [...defaultFavorites];
+}
+
+let favorites = loadFavorites();
+
+function saveFavorites() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites));
+  } catch (error) {
+    console.error("Could not save favorites:", error);
+  }
+}
+
 export function getFavorites() {
   return [...favorites];
 }
@@ -31,6 +70,7 @@ export function addFavorite(book) {
   }
 
   favorites.push(book);
+  saveFavorites();
   return true;
 }
 
@@ -44,9 +84,9 @@ export function removeFavorite(bookId) {
   }
 
   favorites.splice(index, 1);
+  saveFavorites();
   return true;
 }
-
 
 function updateFavoritesPage() {
   const bookList = document.querySelector("#book-list");
@@ -58,6 +98,17 @@ function updateFavoritesPage() {
   }
 
   const favoriteBooks = getFavorites();
+  const favoriteIds = new Set(
+    favoriteBooks.map((book) => book.id)
+  );
+
+  bookList.querySelectorAll("[data-book-card]").forEach((card) => {
+    const button = card.querySelector("[data-book-id]");
+
+    if (button && !favoriteIds.has(button.dataset.bookId)) {
+      card.remove();
+    }
+  });
 
   favoritesCount.textContent = favoriteBooks.length;
   emptyState.classList.toggle("hidden", favoriteBooks.length > 0);
@@ -70,8 +121,7 @@ function handleFavoriteClick(event) {
     return;
   }
 
-  const bookId = removeButton.dataset.bookId;
-  const removed = removeFavorite(bookId);
+  const removed = removeFavorite(removeButton.dataset.bookId);
 
   if (!removed) {
     return;
@@ -93,8 +143,14 @@ function initializeFavoritesPage() {
     return;
   }
 
+  
+  if (localStorage.getItem(STORAGE_KEY) === null) {
+    saveFavorites();
+  }
+
   bookList.addEventListener("click", handleFavoriteClick);
   updateFavoritesPage();
 }
 
 initializeFavoritesPage();
+
