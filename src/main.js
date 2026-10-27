@@ -202,11 +202,15 @@ async function loadBooks(title = "romance") {
   try {
     const books = await fetchBooks(searchTerm);
 
-    if (books.length === 0) {
-      bookStatus.textContent =
-        `No books found for "${searchTerm}". Try another title.`;
-      return;
-    }
+   if (books.length === 0) {
+  bookStatus.textContent =
+    `No books found for "${searchTerm}". Try another title.`;
+
+  bookStatus.className =
+    "mt-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-red-700";
+
+  return;
+}
 
     const fragment = document.createDocumentFragment();
 
@@ -217,12 +221,16 @@ async function loadBooks(title = "romance") {
     bookGrid.append(fragment);
     bookStatus.textContent =
       `Showing ${books.length} books for "${searchTerm}".`;
-  } catch (error) {
-    console.error("Could not load books:", error);
+}
+  catch (error) {
+  console.error("Could not load books:", error);
 
-    bookStatus.textContent =
-      "We couldn't load the books. Please check your connection and try again.";
-  }
+  bookStatus.textContent =
+    "We couldn't load the books. Please check your connection and try again.";
+
+  bookStatus.className =
+    "mt-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-red-700";
+}
 }
 
 searchForm.addEventListener("submit", (event) => {
