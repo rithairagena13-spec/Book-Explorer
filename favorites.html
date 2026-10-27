@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f7f1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <title>My Favorites</title>
+  <link rel="stylesheet" href="/src/input.css">
+</head>
+
+<body class="bg-[#F3EDE3] font-['DM_Sans'] text-[#304b37] antialiased">
+
+  <header class="border-b border-[#304b37]/10 bg-[#f8f7f1]">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-12">
+      <a href="/index.html" class="flex items-center gap-3">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#304b37] text-white">
+          <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+        </span>
+        <span class="font-['Playfair_Display'] text-xl font-semibold">Book Explorer</span>
+      </a>
+
+      <div class="flex items-center gap-5 text-sm font-medium sm:gap-8">
+        <a href="/index.html" class="text-[#647064] transition hover:text-[#304b37]">Home</a>
+        <a href="/index.html#books" class="hidden text-[#647064] transition hover:text-[#304b37] sm:block">Books</a>
+        <a href="/favorites.html" aria-current="page" class="border-b-2 border-[#71876a] pb-1 text-[#304b37]">Favorites</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="overflow-hidden bg-[#D8C8AA]">
+      <div class="grid items-center gap-6 py-10 pl-5 sm:pl-8 lg:min-h-[560px] lg:grid-cols-[0.9fr_1.1fr] lg:gap-5 lg:py-0 lg:pl-12">
+        <div class="order-2 pr-5 lg:order-1 lg:py-16">
+          <p class="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-[#526c4d]">
+            <span class="h-px w-8 bg-[#71876a]"></span>
+            Your personal reading room
+          </p>
+
+          <h1 class="font-['Playfair_Display'] text-5xl font-medium leading-tight tracking-tight sm:text-6xl">
+            My Favorite <span class="italic text-[#71876a]">Books.</span>
+          </h1>
+
+          <p class="mt-6 max-w-md text-sm leading-7 text-[#596359] sm:text-base">
+            A little collection of stories worth keeping, characters worth remembering, and pages worth revisiting.
+          </p>
+
+          <div class="mt-7 flex items-center gap-3 text-sm font-semibold">
+            <i class="fa-regular fa-bookmark text-lg" aria-hidden="true"></i>
+            <span><span id="favorites-count">3</span> books in your collection</span>
+          </div>
+
+          <a href="#book-list" class="mt-8 inline-flex items-center gap-3 rounded-full bg-[#304b37] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#263b2b]">
+            Explore my collection
+            <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="order-1 -mr-5 overflow-hidden sm:-mr-8 lg:order-2 lg:-mr-0">
+          <img src="/images/favorites-hero.jpg" alt="A peaceful reading corner with books and warm natural light" class="h-[300px] w-full object-cover object-center sm:h-[400px] lg:h-[560px]">
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20 lg:px-12">
+      <div class="mb-10 flex flex-col justify-between gap-4 border-b border-[#304b37]/15 pb-6 sm:flex-row sm:items-end">
+        <div>
+          <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-[#71876a]">Your bookshelf</p>
+          <h2 class="font-['Playfair_Display'] text-3xl font-medium sm:text-4xl">Stories to keep close</h2>
+        </div>
+        <p class="max-w-sm text-sm leading-6 text-[#73786f]">The books you love, gathered in one peaceful place.</p>
+      </div>
+
+      <div id="book-list" class="divide-y divide-[#304b37]/15">
+        <article data-book-card="1" class="group grid gap-5 py-7 sm:grid-cols-[110px_1fr_auto] sm:items-center sm:gap-8">
+          <div class="flex h-36 w-28 items-center justify-center overflow-hidden bg-[#e6d8bd] shadow-sm transition duration-300 group-hover:-translate-y-1 group-hover:shadow-md">
+            <div class="flex h-[88%] w-[86%] flex-col items-center justify-center border border-[#7f674a]/50 px-2 text-center text-[#604d39]">
+              <i class="fa-solid fa-leaf mb-3 text-lg" aria-hidden="true"></i>
+              <span class="font-['Playfair_Display'] text-sm font-semibold leading-tight">Pride and Prejudice</span>
+              <span class="mt-3 text-[9px] uppercase tracking-widest">Jane Austen</span>
+            </div>
+          </div>
+
+          <div>
+            <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#71876a]">Classic literature</p>
+            <h3 class="font-['Playfair_Display'] text-2xl font-medium">Pride and Prejudice</h3>
+            <p class="mt-2 text-sm text-[#73786f]">by Jane Austen</p>
+            <p class="mt-4 max-w-xl text-sm leading-6 text-[#626a60]">A timeless story of love, first impressions, and discovering what truly matters.</p>
+          </div>
+
+          <button type="button" data-book-id="1" aria-pressed="false" class="inline-flex items-center justify-center gap-2 self-start rounded-full border border-[#304b37]/20 px-4 py-2.5 text-sm font-medium transition hover:border-[#304b37] hover:bg-[#304b37] hover:text-white sm:self-center">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            <span>Remove</span>
+          </button>
+        </article>
+
+        <article data-book-card="2" class="group grid gap-5 py-7 sm:grid-cols-[110px_1fr_auto] sm:items-center sm:gap-8">
+          <div class="flex h-36 w-28 items-center justify-center overflow-hidden bg-[#d7dfd0] shadow-sm transition duration-300 group-hover:-translate-y-1 group-hover:shadow-md">
+            <div class="flex h-[88%] w-[86%] flex-col items-center justify-center border border-[#526c4d]/50 px-2 text-center text-[#304b37]">
+              <i class="fa-solid fa-seedling mb-3 text-lg" aria-hidden="true"></i>
+              <span class="font-['Playfair_Display'] text-lg font-semibold leading-tight">Jane Eyre</span>
+              <span class="mt-3 text-[9px] uppercase tracking-widest">Charlotte Brontë</span>
+            </div>
+          </div>
+
+          <div>
+            <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#71876a]">Gothic romance</p>
+            <h3 class="font-['Playfair_Display'] text-2xl font-medium">Jane Eyre</h3>
+            <p class="mt-2 text-sm text-[#73786f]">by Charlotte Brontë</p>
+            <p class="mt-4 max-w-xl text-sm leading-6 text-[#626a60]">A moving journey of independence, courage, and finding a place to belong.</p>
+          </div>
+
+          <button type="button" data-book-id="2" aria-pressed="false" class="inline-flex items-center justify-center gap-2 self-start rounded-full border border-[#304b37]/20 px-4 py-2.5 text-sm font-medium transition hover:border-[#304b37] hover:bg-[#304b37] hover:text-white sm:self-center">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            <span>Remove</span>
+          </button>
+        </article>
+
+        <article data-book-card="3" class="group grid gap-5 py-7 sm:grid-cols-[110px_1fr_auto] sm:items-center sm:gap-8">
+          <div class="flex h-36 w-28 items-center justify-center overflow-hidden bg-[#ead6d0] shadow-sm transition duration-300 group-hover:-translate-y-1 group-hover:shadow-md">
+            <div class="flex h-[88%] w-[86%] flex-col items-center justify-center border border-[#a47770]/50 px-2 text-center text-[#754d49]">
+              <i class="fa-solid fa-heart mb-3 text-lg" aria-hidden="true"></i>
+              <span class="font-['Playfair_Display'] text-lg font-semibold leading-tight">Me Before You</span>
+              <span class="mt-3 text-[9px] uppercase tracking-widest">Jojo Moyes</span>
+            </div>
+          </div>
+
+          <div>
+            <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#a47770]">Contemporary fiction</p>
+            <h3 class="font-['Playfair_Display'] text-2xl font-medium">Me Before You</h3>
+            <p class="mt-2 text-sm text-[#73786f]">by Jojo Moyes</p>
+            <p class="mt-4 max-w-xl text-sm leading-6 text-[#626a60]">An emotional story about connection, change, and the unexpected ways people affect our lives.</p>
+          </div>
+
+          <button type="button" data-book-id="3" aria-pressed="false" class="inline-flex items-center justify-center gap-2 self-start rounded-full border border-[#304b37]/20 px-4 py-2.5 text-sm font-medium transition hover:border-[#304b37] hover:bg-[#304b37] hover:text-white sm:self-center">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            <span>Remove</span>
+          </button>
+        </article>
+      </div>
+
+      <div id="empty-state" class="hidden py-20 text-center">
+        <span class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#e7ecdf] text-2xl text-[#526c4d]">
+          <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+        </span>
+        <h3 class="mt-6 font-['Playfair_Display'] text-3xl">Your shelf is waiting</h3>
+        <p class="mt-3 text-sm leading-6 text-[#73786f]">Explore the collection and save a book you love.</p>
+        <a href="/index.html#books" class="mt-6 inline-flex items-center gap-2 rounded-full bg-[#304b37] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#263b2b]">
+          Discover books <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="mt-8 flex items-center gap-3 text-xs leading-5 text-[#73786f]">
+        <i class="fa-solid fa-leaf text-[#71876a]" aria-hidden="true"></i>
+        <p>A small collection today. A world of stories tomorrow.</p>
+      </div>
+    </section>
+
+    <section class="bg-[#e8ede3]">
+      <div class="mx-auto flex max-w-6xl flex-col justify-between gap-5 px-5 py-10 sm:flex-row sm:items-center sm:px-8 lg:px-12">
+        <div>
+          <p class="font-['Playfair_Display'] text-2xl">Every book holds a little world.</p>
+          <p class="mt-2 text-sm text-[#626a60]">Find the next one waiting for you.</p>
+        </div>
+        <a href="/index.html#books" class="inline-flex items-center gap-3 self-start rounded-full border border-[#304b37]/20 px-5 py-3 text-sm font-semibold transition hover:bg-[#304b37] hover:text-white">
+          Explore books <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#f8f7f1]">
+    <div class="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-6 text-xs text-[#73786f] sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
+      <p>&copy; 2026 Book Explorer. Made for readers.</p>
+      <a href="/index.html" class="transition hover:text-[#304b37]">Back to home</a>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/favorites.js"></script>
+</body>
