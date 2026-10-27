@@ -5,6 +5,8 @@ const STORAGE_KEY = "bookExplorerFavorites";
 
 const bookGrid = document.querySelector("#book-grid");
 const bookStatus = document.querySelector("#book-status");
+const searchForm = document.querySelector("#book-search-form");
+const searchInput = document.querySelector("#book-search");
 
 function getSavedFavorites() {
   try {
@@ -40,7 +42,7 @@ function addFavorite(book) {
   }
 }
 
-function createBookCard(book, index) {
+function createBookCard(book) {
   const article = document.createElement("article");
   article.className =
     "group rounded-2xl border border-[#e9e5dc] bg-[#fffdf8] p-4 transition duration-300 hover:-translate-y-1 hover:shadow-lg";
@@ -56,15 +58,21 @@ function createBookCard(book, index) {
     cover.loading = "lazy";
     cover.className = "h-56 max-w-full rounded-lg object-contain shadow-md";
 
-    cover.addEventListener("error", () => {
-      cover.remove();
-      const fallback = document.createElement("div");
-      fallback.className =
-        "flex h-44 w-32 items-center justify-center rounded-lg bg-[#8b9a82] p-4 text-center text-white";
-      fallback.innerHTML =
-        '<i class="fa-solid fa-book-open text-3xl" aria-hidden="true"></i>';
-      coverArea.append(fallback);
-    }, { once: true });
+    cover.addEventListener(
+      "error",
+      () => {
+        cover.remove();
+
+        const fallback = document.createElement("div");
+        fallback.className =
+          "flex h-44 w-32 items-center justify-center rounded-lg bg-[#8b9a82] p-4 text-center text-white";
+        fallback.innerHTML =
+          '<i class="fa-solid fa-book-open text-3xl" aria-hidden="true"></i>';
+
+        coverArea.append(fallback);
+      },
+      { once: true }
+    );
 
     coverArea.append(cover);
   } else {
@@ -73,6 +81,7 @@ function createBookCard(book, index) {
       "flex h-44 w-32 items-center justify-center rounded-lg bg-[#8b9a82] p-4 text-white";
     fallback.innerHTML =
       '<i class="fa-solid fa-book-open text-3xl" aria-hidden="true"></i>';
+
     coverArea.append(fallback);
   }
 
@@ -82,7 +91,7 @@ function createBookCard(book, index) {
   const category = document.createElement("span");
   category.className =
     "rounded-full bg-[#e9ede4] px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-[#657861]";
-  category.textContent = "Romance";
+  category.textContent = "Book";
 
   const title = document.createElement("h3");
   title.className =
@@ -139,7 +148,9 @@ function updateFavoriteButton(button) {
 }
 
 function updateAllFavoriteButtons() {
-  bookGrid.querySelectorAll("[data-add-favorite]").forEach(updateFavoriteButton);
+  bookGrid
+    .querySelectorAll("[data-add-favorite]")
+    .forEach(updateFavoriteButton);
 }
 
 bookGrid.addEventListener("click", (event) => {
@@ -164,31 +175,47 @@ bookGrid.addEventListener("click", (event) => {
   }
 });
 
-async function loadRomanticBooks() {
-  bookStatus.textContent = "Loading romantic books...";
+async function loadBooks(title = "romance") {
+  const searchTerm = title.trim() || "romance";
+
+  bookStatus.textContent = `Searching for "${searchTerm}"...`;
   bookGrid.replaceChildren();
 
   try {
-    const books = await fetchBooks();
+    const books = await fetchBooks(searchTerm);
 
     if (books.length === 0) {
-      bookStatus.textContent = "No romantic books were found.";
+      bookStatus.textContent = `No books found for "${searchTerm}".`;
       return;
     }
 
     const fragment = document.createDocumentFragment();
 
-    books.forEach((book, index) => {
-      fragment.append(createBookCard(book, index));
+    books.forEach((book) => {
+      fragment.append(createBookCard(book));
     });
 
     bookGrid.append(fragment);
-    bookStatus.textContent = `Showing ${books.length} romantic books.`;
-  } catch (error) {
-    console.error("Could not load romantic books:", error);
     bookStatus.textContent =
-      "We couldn't load the books. Please refresh and try again.";
+      `Showing ${books.length} books for "${searchTerm}".`;
+  } catch (error) {
+    console.error("Could not load books:", error);
+    bookStatus.textContent =
+      "We couldn't load the books. Please try again.";
   }
 }
 
-loadRomanticBooks();
+searchForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const title = searchInput.value.trim();
+
+  if (!title) {
+    searchInput.focus();
+    return;
+  }
+
+  loadBooks(title);
+});
+
+loadBooks();
