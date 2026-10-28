@@ -247,3 +247,5 @@ searchForm.addEventListener("submit", (event) => {
 });
 
 loadBooks();
+
+
