@@ -217,3 +217,24 @@ function initializeFavoritesPage() {
 }
 
 initializeFavoritesPage();
+
+
+function initializeHeroSlideshow() {
+  const heroImages = document.querySelectorAll(".hero-slide");
+
+  if (heroImages.length < 2) return;
+
+  let currentImage = 0;
+
+  setInterval(() => {
+    heroImages[currentImage].classList.remove("opacity-100");
+    heroImages[currentImage].classList.add("opacity-0");
+
+    currentImage = (currentImage + 1) % heroImages.length;
+
+    heroImages[currentImage].classList.remove("opacity-0");
+    heroImages[currentImage].classList.add("opacity-100");
+  }, 2000);
+}
+
+initializeHeroSlideshow();
