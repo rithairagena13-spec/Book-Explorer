@@ -1,0 +1,207 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover the story behind Book Explorer, your home for finding books and collecting stories worth remembering." />
+  <meta name="theme-color" content="#f5f1e8" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/src/input.css">
+  <script type="module" src="/src/about.js"></script>
+  <title>Our Story | Book Explorer</title>
+</head>
+
+<body class="bg-[#f5f1e8] font-['DM_Sans'] text-[#263b2d] antialiased">
+
+  <header class="border-b border-[#dcd8cc]">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-12" aria-label="Main navigation">
+      <a href="./index.html" class="flex items-center gap-3">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#294632] font-['Playfair_Display'] text-xl text-[#f5f1e8]">B</span>
+        <span class="text-base font-bold tracking-tight sm:text-lg">Book Explorer</span>
+      </a>
+
+      <div class="flex items-center gap-4 text-xs font-medium sm:gap-8 sm:text-sm">
+        <a href="./index.html" class="transition hover:text-[#9a704b]">Discover</a>
+        <a href="./favorites.html" class="transition hover:text-[#9a704b]">My collection</a>
+        <a href="./about.html" aria-current="page" class="border-b border-[#294632] pb-1">Our story</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    
+    <section class="mx-auto max-w-7xl px-5 pb-16 pt-12 sm:px-8 sm:pb-24 sm:pt-20 lg:px-12 lg:pt-24">
+      <div class="mb-8 flex items-center justify-between gap-4">
+        <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#8a755b] sm:text-xs">Inside Book Explorer</p>
+        <p class="text-xs text-[#77776c]">An invitation to discover</p>
+      </div>
+
+      <div class="grid gap-10 lg:grid-cols-12 lg:items-start lg:gap-8">
+        <div class="relative z-10 lg:col-span-7">
+          <h1 class="max-w-4xl font-['Playfair_Display'] text-5xl leading-[1.08] tracking-[-0.04em] sm:text-7xl lg:text-[6.5rem]">
+            Some worlds<br>
+            are waiting<br>
+            <span class="italic text-[#8a755b]">between pages.</span>
+          </h1>
+
+          <div class="mt-8 flex max-w-xl items-start gap-5 sm:mt-10">
+            <span class="mt-2 h-px w-12 shrink-0 bg-[#8a755b]"></span>
+            <p class="text-sm leading-7 text-[#65695e] sm:text-base sm:leading-8">
+              We believe the right book can introduce you to a new idea,
+              take you somewhere unexpected, or make an ordinary day
+              feel extraordinary. Book Explorer helps you find the story
+              that speaks to you.
+            </p>
+          </div>
+
+          <a href="./index.html" class="mt-8 inline-flex items-center gap-4 border-b border-[#294632] pb-2 text-sm font-semibold transition hover:gap-6">
+            Find your next story <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="relative lg:col-span-5 lg:mt-16">
+          <div class="absolute -right-2 -top-3 h-full w-full border border-[#c7cbb9] sm:-right-4 sm:-top-4"></div>
+
+          <figure class="relative">
+            <img
+              src="/images/about_image.avif"
+              alt="A collection of books waiting to be explored"
+              class="h-[380px] w-full object-cover sm:h-[490px]" >
+            <figcaption class="absolute bottom-0 left-0 right-0 flex items-center justify-between gap-3 bg-[#263b2d]/90 px-5 py-4 text-xs text-[#f5f1e8] sm:px-6">
+              <span>For the curious reader.</span>
+              <span class="uppercase tracking-[0.2em]">Vol. 01</span>
+            </figcaption>
+            
+          </figure>
+
+          <p class="mt-4 text-right font-['Playfair_Display'] text-sm italic text-[#77776c]">
+            Every discovery begins somewhere.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="bg-[#294632] text-[#f5f1e8]">
+      <div class="mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-12 lg:items-center lg:gap-12 lg:px-12">
+        <div class="lg:col-span-4">
+          <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#c9b48d] sm:text-xs">What we believe</p>
+          <h2 class="mt-5 font-['Playfair_Display'] text-4xl leading-tight sm:text-5xl">
+            Reading is a journey, not a checklist.
+          </h2>
+        </div>
+
+        <div class="lg:col-span-7 lg:col-start-6">
+          <p class="text-base leading-8 text-[#e0e3d7] sm:text-lg sm:leading-9">
+            There are books we search for, books we stumble upon, and
+            books that find us when we need them most. We created Book
+            Explorer to make those moments of discovery easier to find
+            and the stories you love easier to keep.
+          </p>
+          <p class="mt-5 font-['Playfair_Display'] text-xl italic text-[#c9b48d]">
+            A little curiosity can take you a long way.
+          </p>
+        </div>
+      </div>
+    </section>
+
+   
+    <section class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24 lg:px-12">
+      <div class="grid gap-10 lg:grid-cols-12 lg:gap-16">
+        <div class="lg:col-span-4">
+          <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#8a755b] sm:text-xs">The experience</p>
+          <h2 class="mt-4 font-['Playfair_Display'] text-4xl leading-tight sm:text-5xl">
+            Your reading life, thoughtfully collected.
+          </h2>
+          <p class="mt-5 text-sm leading-7 text-[#65695e] sm:text-base">
+            No complicated routines. Just a simple place to explore,
+            discover, and remember the books that catch your attention.
+          </p>
+        </div>
+
+        <div class="lg:col-span-7 lg:col-start-6">
+          <article class="grid gap-4 border-t border-[#d7d4c8] py-7 sm:grid-cols-[72px_1fr] sm:gap-6">
+            <span class="font-['Playfair_Display'] text-3xl italic text-[#9a704b]">01</span>
+            <div>
+              <h3 class="font-['Playfair_Display'] text-2xl sm:text-3xl">Follow your curiosity.</h3>
+              <p class="mt-3 max-w-xl text-sm leading-7 text-[#65695e]">
+                Search for books, authors, and titles that interest you.
+                Let a familiar name or an unexpected discovery guide you.
+              </p>
+            </div>
+          </article>
+
+          <article class="grid gap-4 border-t border-[#d7d4c8] py-7 sm:grid-cols-[72px_1fr] sm:gap-6">
+            <span class="font-['Playfair_Display'] text-3xl italic text-[#9a704b]">02</span>
+            <div>
+              <h3 class="font-['Playfair_Display'] text-2xl sm:text-3xl">Keep what speaks to you.</h3>
+              <p class="mt-3 max-w-xl text-sm leading-7 text-[#65695e]">
+                Save books to your favorites and build a personal collection
+                of titles you want to revisit.
+              </p>
+            </div>
+          </article>
+
+          <article class="grid gap-4 border-y border-[#d7d4c8] py-7 sm:grid-cols-[72px_1fr] sm:gap-6">
+            <span class="font-['Playfair_Display'] text-3xl italic text-[#9a704b]">03</span>
+            <div>
+              <h3 class="font-['Playfair_Display'] text-2xl sm:text-3xl">Make room for the next story.</h3>
+              <p class="mt-3 max-w-xl text-sm leading-7 text-[#65695e]">
+                Return to your collection whenever inspiration strikes
+                and keep discovering books beyond your usual reading list.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="relative overflow-hidden bg-[#e7e4d8]">
+      <div class="mx-auto grid max-w-7xl lg:grid-cols-2">
+        <div class="flex flex-col justify-center px-5 py-14 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
+          <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#8a755b] sm:text-xs">A note to readers</p>
+          <blockquote class="mt-5 max-w-xl font-['Playfair_Display'] text-3xl leading-snug sm:text-5xl sm:leading-tight">
+            “You never know which book will change the way you see the world.”
+          </blockquote>
+          <p class="mt-6 text-sm text-[#65695e]">So stay curious. Your next discovery might surprise you.</p>
+        </div>
+
+        <div class="min-h-[300px] sm:min-h-[420px]">
+          <img src="/images/about_2.avif" alt="A welcoming library filled with books"   class="h-full min-h-[300px] w-full object-cover sm:min-h-[420px]"
+            loading="lazy" >
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="mx-auto max-w-4xl px-5 py-20 text-center sm:px-8 sm:py-28">
+      <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#8a755b] sm:text-xs">Turn the page</p>
+      <h2 class="mt-5 font-['Playfair_Display'] text-4xl leading-tight sm:text-6xl">
+        Your next favorite book is out there.
+      </h2>
+      <p class="mx-auto mt-5 max-w-xl text-sm leading-7 text-[#65695e] sm:text-base sm:leading-8">
+        Start exploring, save the titles that catch your eye, and let
+        your next reading adventure begin.
+      </p>
+      <a href="./index.html" class="mt-8 inline-flex items-center gap-3 bg-[#294632] px-7 py-4 text-sm font-semibold text-[#f5f1e8] transition hover:bg-[#3b5942] focus:outline-none focus:ring-2 focus:ring-[#8a755b] focus:ring-offset-2">
+        Explore books <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="border-t border-[#dcd8cc]">
+    <div class="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-7 text-xs text-[#77776c] sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
+      <a href="./index.html" class="font-bold text-[#294632]">Book Explorer</a>
+      <p>Discover stories. Keep your favorites. Stay curious.</p>
+      <p>Made for readers everywhere.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
